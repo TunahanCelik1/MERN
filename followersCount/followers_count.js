@@ -19,5 +19,11 @@ function checkCountValue() {
   }
 }
 
+function resetCount() {
+    count = 0;
+    displayCount();
+    alert("Takipci sayınız sıfırlandı!")
+}
+
 
 
