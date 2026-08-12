@@ -26,7 +26,10 @@ function showbooks() {
         <p><strong>Yazar Adı:</strong> ${book.authorName}</p>
         <p><strong>Kitap Açıklaması:</strong> ${book.bookDescription}</p>
         <p><strong>Sayfa Sayısı:</strong> ${book.pagesNumber} sayfa</p>
-        <button onclick="editbook(${index})">Düzenle</button>`
+        <button onclick="editbook(${index})">Düzenle</button>
+        <button onclick="deletebook(${index})">Delete</button>`
+
+
     );
     document.getElementById('books').innerHTML = booksDiv.join('');
 }
@@ -49,3 +52,8 @@ function editbook(index) {
  }
 
 
+function deletebook(index) {
+    // Remove the book entry at the given index
+    books.splice(index, 1);
+    showbooks(); // Refresh the book list after deletion
+}
