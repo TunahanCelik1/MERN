@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitap Yönetim Sistemi</title>
+</head>
+<body>
+    <h1>Kitap Yönetim Sistemi</h1>
+    <label for="bookName">Kitap Adı:</label><br>
+    <input type="text" id="bookName"><br><br>
+    <label for="authorName">Yazar Adı:</label><br>
+    <textarea id="authorName" rows="4"></textarea><br><br>
+    <label for="bookDescription">Kitap Açıklaması:</label><br>
+    <textarea id="bookDescription" rows="4"></textarea><br><br>
+    <label for="pagesNumber">Sayfa Sayısı:</label><br>
+    <input type="number" id="pagesNumber"><br><br>
+    <button onclick="addBook()">Kitap Ekle</button>
+
+    <h2>Kitaplar</h2>
+    <div id="books">
+        <!-- kitaplar burada görüntülenecek -->
+    </div> 
+    <script src="./book_system.js"></script>
+</body>
+</html>
