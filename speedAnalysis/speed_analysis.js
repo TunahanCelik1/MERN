@@ -27,6 +27,8 @@ startTime = new Date().getTime();
             var timeElapsed = (endTime - startTime) / 1000; // saniye cinsinden
             var userTypedText = document.getElementById("userInput").value;
 
+            var totalLength = userTypedText.length;
+
             // Kelimeleri doğru saymak için metni regex kullanarak ayır
             var typedWords = userTypedText.split(/\s+/).filter(function (word) {
                 return word !== "";
@@ -41,6 +43,7 @@ startTime = new Date().getTime();
             // Sonuçları göster
             var outputDiv = document.getElementById("output");
             outputDiv.innerHTML = "<h2>Yazma Testi Sonuçları:</h2>" +
+                "<p>Toplam Uzunluk: " + totalLength + "</p>" +
                 "<p>Yazılan Kelimeler: " + typedWords + "</p>" +
                 "<p>Geçen Süre: " + timeElapsed.toFixed(2) + " saniye</p>" +
                 "<p>Dakikada Kelime (WPM): " + wpm + "</p>";
